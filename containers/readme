@@ -1,0 +1,1 @@
+docker run --rm -it --name=kz a2479ca253f2 /bin/bash

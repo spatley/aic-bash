@@ -1,0 +1,8 @@
+FROM ubuntu:18.04
+RUN apt-get update && \
+      apt-get -y install sudo
+RUN  apt-get -y  install jq jp2a coreutils curl
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+
+USER docker
+CMD /bin/bash
